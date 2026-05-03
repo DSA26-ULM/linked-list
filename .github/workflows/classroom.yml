@@ -36,7 +36,7 @@ jobs:
           test-name: "Soal 2 - Si Palui dan Relikui Siklus Resonansi"
           setup-command: >
             g++ -std=c++23 -O2
-            -o prob1 prob1.cpp single_linked_list.cpp
+            -o prob_a prob_a.cpp single_linked_list.cpp
           command: "bash tests/grade_io.sh ./prob_a tests/prob_a"
           timeout: 15
           max-score: 25
@@ -61,7 +61,7 @@ jobs:
           test-name: "Soal 4 - Si Palui dan Tarik Tambang Dimensi"
           setup-command: >
             g++ -std=c++23 -O2
-            -o prob2 prob2.cpp double_linked_list.cpp
+            -o prob_b prob_b.cpp double_linked_list.cpp
           command: "bash tests/grade_io.sh ./prob_b tests/prob_b"
           timeout: 15
           max-score: 25
