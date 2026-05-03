@@ -2,23 +2,31 @@
 #define DOUBLE_LINKED_LIST
 
 struct Node {
-    int data;
+    char data;
     Node * next;
     Node * prev;
 };
 
-struct double_linked_list {
-    Node *head, *tail;
+struct DoubleLinkedList {
+    Node *head = nullptr, *tail = nullptr;
+    int size = 0;
 
     void init();
+    bool is_empty();
+    
     void add_front(int val);
     void add_back(int val);
+    void add_idx(int val, int idx);
+
     void delete_front();
     void delete_back();
-    void add_idx(int val, int idx);
     void delete_idx(int idx);
-    void clear();
+
     void display();
+    char get(int idx);
+    void set(char val, int idx);
+
+    void clear();
 };
 
 

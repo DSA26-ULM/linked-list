@@ -6,18 +6,26 @@ struct Node {
     Node * next;
 };
 
-struct single_linked_list {
-    Node *head, *tail;
+struct SingleLinkedList {
+    Node *head = nullptr, *tail = nullptr;
+    int size = 0;
     
     void init();
+    bool is_empty();
+    
     void add_front(int val);
     void add_back(int val);
+    void add_idx(int val, int idx);
+
     void delete_front();
     void delete_back();
-    void add_idx(int val, int idx);
     void delete_idx(int idx);
-    void clear();
+
     void display();
+    int get(int idx);
+    void set(int val, int idx);
+
+    void clear();
 };
 
 #endif
